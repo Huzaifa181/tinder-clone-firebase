@@ -14,6 +14,22 @@ const TinderCards = () => {
     ]
         
         )
+        useEffect(() => {
+            let unsubscribe;
+                unsubscribe=db.collection("people")
+                .doc(postId)
+                .collection("comments")
+                .orderBy('timestamp','desc')
+                .onSnapshot(snapshot=>{
+                    setComments(snapshot.docs.map(doc=>{
+                        return(doc.data())
+                    }))
+                })
+
+            return ()=>{
+                unsubscribe()
+            }
+        }, [postId]);
     return (
         <div>
             <div className="tinerCards__cardsContainer">
