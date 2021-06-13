@@ -5,6 +5,7 @@ import Header from './Header'
 import TinderCard from './TinderCards'
 import SwipeButtons from './SwipeButtons'
 import Chats from './Chats'
+import ChatScreen from './ChatScreen'
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
           <Switch>
             <Route path="/chat/:person">
               <Header backButton='/chat'/>
-              <Chats/>
+              <ChatScreen/>
             </Route>
             <Route path="/chat">
               <Header backButton='/'/>
