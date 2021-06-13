@@ -20,7 +20,6 @@ const TinderCards = () => {
     return (
         <div>
             <div className="tinerCards__cardsContainer">
-
             {people.map(p=>{
                 return(
             <TinderCard

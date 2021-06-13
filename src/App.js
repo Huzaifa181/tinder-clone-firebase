@@ -3,18 +3,20 @@ import {BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import logo from './logo.svg';
 import Header from './Header'
 import TinderCard from './TinderCards'
+import SwipeButtons from './SwipeButtons'
 
 function App() {
   return (
     <div className='app'>
-          <Header/>
         <Router>
+          <Header/>
           <Switch>
             <Route path="/chat">
               <h2>I am chatr page</h2>
             </Route>
             <Route path="/">
               <TinderCard/>
+              <SwipeButtons/>
             </Route>
           </Switch>
         {/* <Route exact path="/" render={()=><Layout/>}/> */}
