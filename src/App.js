@@ -4,15 +4,20 @@ import logo from './logo.svg';
 import Header from './Header'
 import TinderCard from './TinderCards'
 import SwipeButtons from './SwipeButtons'
+import Chats from './Chats'
 
 function App() {
   return (
     <div className='app'>
         <Router>     
           <Switch>
+            <Route path="/chat/:person">
+              <Header backButton='/chat'/>
+              <Chats/>
+            </Route>
             <Route path="/chat">
               <Header backButton='/'/>
-              <h2>I am chatr page</h2>
+              <Chats/>
             </Route>
             <Route path="/">
             <Header/>
