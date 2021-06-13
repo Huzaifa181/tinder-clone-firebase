@@ -8,13 +8,14 @@ import SwipeButtons from './SwipeButtons'
 function App() {
   return (
     <div className='app'>
-        <Router>
-          <Header/>
+        <Router>     
           <Switch>
             <Route path="/chat">
+              <Header backButton='/'/>
               <h2>I am chatr page</h2>
             </Route>
             <Route path="/">
+            <Header/>
               <TinderCard/>
               <SwipeButtons/>
             </Route>
