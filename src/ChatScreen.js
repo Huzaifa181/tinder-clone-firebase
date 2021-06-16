@@ -17,6 +17,7 @@ const ChatScreen = () => {
     const handleSend=(e)=>{
         e.preventDefault()
         setMessage([...message,{message:input}])
+        setInput('')
     }
 
     return (
@@ -24,6 +25,8 @@ const ChatScreen = () => {
             <p className='chatscreen__timestamp'>
                 You matched with Elen
             </p>
+            <div className='mssg__box'>
+
             {message.map(mssg=>{
                 return(
                     mssg.name?
@@ -38,6 +41,7 @@ const ChatScreen = () => {
                 
                 )
             })}
+            </div>
                 <form action="" className='chatscreen__input'>
                     <input
                     value={input}
